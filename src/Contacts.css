@@ -1,0 +1,70 @@
+/* Contacts */
+
+.contactsContainer {
+  background-color: rgb(140, 186, 223);
+  min-height: 100vh;
+  width: 100%;
+}
+
+.contactsWrapper {
+  float: right;
+}
+
+.contactsHeader {
+  padding-top: 40px;
+  font-size: 50px;
+  margin: 0px;
+  text-align: center;
+}
+
+.LinksList {
+
+  margin-left: 100vh;
+
+  list-style: none;
+  text-align: left;
+  padding: 20px;
+  /* margin: 0; */
+
+
+}
+
+.LinksList li{
+  vertical-align: middle;
+}
+
+
+.contactLogo {
+  max-height: 3vh;
+  padding-right: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,92 @@
+/* Project */
+
+.projectContainer {
+  background-color: #4d5b75;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.projectHeader {
+  text-align-last: center;
+  margin: 0px;
+  padding-top: 40px;
+  font-size: 50px;
+}
+
+.Projects {
+
+  display: flex;
+  flex-wrap: wrap;
+  
+  gap: 120px;
+  padding: 60px;
+  margin-top: 80px;
+  margin-bottom: 80px;
+  justify-content: space-evenly;
+  
+}
+
+
+
+.hoverCard:hover {
+  scale: 1.1;
+  transition: ease 1s;
+}
+
+.projectCard img {
+  height: 50px;
+  width: 50px;
+
+  align-self: center;
+}
+
+.projectCard p {
+  text-align: center;
+}
+
+.projectCard {
+  height: 330px;
+  width: 200px;
+
+  border-radius: 7%;
+
+  padding: 15px;
+
+  background-color: black;
+
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+
+  color: white;
+
+  scale: 1.0;
+  transition: ease 1s;
+
+}
+
+.bodyStop {
+  overflow: hidden;
+}
+
+:vars {
+  --posX: 0px;
+  --posY: 0px;
+}
+
+.showCard {
+    
+  transform: translateX(var(--posX))  rotateY(180deg);
+  transition: ease 1.5s;
+
+  scale: 1.6;
+
+  z-index: 10;
+}
+
+
+.test {
+  position: absolute;
+
+  z-index: 100;
+}

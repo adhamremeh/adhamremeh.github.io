@@ -1,0 +1,44 @@
+/*/////////*/
+/* General */
+
+.Main {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+
+a:link {
+  text-decoration: none;
+  color: black;
+}
+
+a:visited {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  color: white;
+  transition: ease 0.5s;
+  filter: opacity(1) drop-shadow(10px 10px 10px white);
+}
+
+a:hover img{
+ filter: grayscale(100%) invert(100%);
+ transition: ease 0.5s;
+}
+
+a:active {
+  text-decoration: none;
+  color: black;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
