@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/static/css/main.4ba97b31.css",
+    "main.js": "/static/js/main.9e502fd6.js",
+    "static/js/787.f587e8d5.chunk.js": "/static/js/787.f587e8d5.chunk.js",
+    "static/media/PersonalPic4_1.png": "/static/media/PersonalPic4_1.9e82f7f1a87f296836d2.png",
+    "static/media/Personal_Pic.jpg": "/static/media/Personal_Pic.af251e080a5d16f38a02.jpg",
+    "static/media/pygame_logo.png": "/static/media/pygame_logo.9f9035750f2e4a2fb011.png",
+    "static/media/Play_Logo.png": "/static/media/Play_Logo.de6eb2744379814ab79d.png",
+    "static/media/Linkedin_Logo.png": "/static/media/Linkedin_Logo.24b444931a4647374ad7.png",
+    "static/media/Twitter_Logo.png": "/static/media/Twitter_Logo.0226ae920d3fb067166d.png",
+    "static/media/PersonalPic3.png": "/static/media/PersonalPic3.a43b7439c1d404294746.png",
+    "static/media/Unity_logo_black.svg": "/static/media/Unity_logo_black.ca4fd86358192edc6d708491962fd844.svg",
+    "static/media/react_logo.svg": "/static/media/react_logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/index.html",
+    "main.4ba97b31.css.map": "/static/css/main.4ba97b31.css.map",
+    "main.9e502fd6.js.map": "/static/js/main.9e502fd6.js.map",
+    "787.f587e8d5.chunk.js.map": "/static/js/787.f587e8d5.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4ba97b31.css",
+    "static/js/main.9e502fd6.js"
+  ]
+}
