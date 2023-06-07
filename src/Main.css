@@ -58,19 +58,20 @@
 
   .MainBWrapper {
     flex-direction: column;
-    left: 30vw;
+    left: -5vw;
     top: 12svh;
-    gap: 55px;
+    gap: 35px;
   }
 
     .MainBWrapper button {
+      align-self: center;
       margin: auto;
       background: none;
       border: none;
   
       color: white;
   
-      font-size: 70px;
+      font-size: 20px;
   
     }
 
@@ -79,7 +80,7 @@
     position: absolute;
 
     left: -55vmax;
-    top: 40dvh;
+    bottom: 60dvh;
 
     z-index: 0;
   }
@@ -96,7 +97,7 @@
     position: absolute;
 
     left: -35vmax;
-    top: 20dvh;
+    bottom: 80dvh;
 
     z-index: 0;
   }
