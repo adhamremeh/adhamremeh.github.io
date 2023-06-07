@@ -16,8 +16,6 @@ import pic4 from './media/PersonalPic4_1.png';
 import { useRef } from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
-import { useCallback } from 'react';
-
 
 import './General.css';
 import './Main.css';
@@ -80,32 +78,35 @@ function Main() {
     document.documentElement.style.setProperty("--posY", newPosY);
   }
 
-
   useEffect(() => {
     document.querySelectorAll(".projectCard").forEach(item => {
       if (item.id == cardID){
         var bounds = item.getBoundingClientRect();
-        var tempBound = document.querySelector(".test").getBoundingClientRect();
 
-        const offSetX = (tempBound.right - bounds.right);
-        const offSetY = (((window.innerHeight / 2) - bounds.top > bounds.bottom ? bounds.top : bounds.bottom) - 165);
+        const offSetX = ((window.innerWidth / 2) - bounds.right + (item.clientWidth / 2));
+        const offSetY = ((window.innerHeight / 2) - bounds.top - (item.clientHeight / 2));
 
         setPos(parseInt(offSetX).toString() + "px", parseInt(offSetY).toString() + "px");
 
         item.classList.add("showCard");
+        item.classList.remove("hideCard");
         item.classList.remove("hoverCard");
         document.body.classList.add("bodyStop");
+        document.querySelector(".plank").classList.add("plankActive");
+        document.querySelector(".plank").classList.remove("plankNotActive");
 
       }
       else{
-        
         item.classList.remove("showCard");
-        item.classList.add("hoverCard");
+        item.classList.add("hideCard");
+        item.classList.add("hoverCard");        
       }
     })
     if (cardID == "")
     {
       document.body.classList.remove("bodyStop");
+      document.querySelector(".plank").classList.add("plankNotActive");
+      document.querySelector(".plank").classList.remove("plankActive");
     }
 
     
@@ -115,6 +116,7 @@ function Main() {
 
   return (
     <div className="Main">
+      <div className='plank' onClick={handleClickCard.bind()}></div>
       <BlogHeader handleClick={handleClick} />
       <About refe={AboutRef} animate={refo}/>
       <Techs refe={TechRef} />
@@ -125,7 +127,7 @@ function Main() {
 
 }
 
-function BlogHeader({handleClick}) {
+function BlogHeader(props) {
   
   
   const Pics = [pic0, pic1, pic2, pic3, pic4]
@@ -133,10 +135,10 @@ function BlogHeader({handleClick}) {
   return (
     <header className="App-header">
       <div className='MainBWrapper'>
-        <button onClick={() => handleClick(0)} >About Me</button>
-        <button onClick={() => handleClick(1)} >Technologies</button>
-        <button onClick={() => handleClick(2)} >Projects</button>
-        <button onClick={() => handleClick(3)} >Contacts</button>
+        <button onClick={() => props.handleClick(0)} >About Me</button>
+        <button onClick={() => props.handleClick(1)} >Technologies</button>
+        <button onClick={() => props.handleClick(2)} >Projects</button>
+        <button onClick={() => props.handleClick(3)} >Contacts</button>
 
       </div>
       
@@ -153,14 +155,14 @@ function BlogHeader({handleClick}) {
   
 }
 
-function About({refe, animate}) {
+function About(props) {
 
   return (
-    <div ref={refe} className='aboutWrapper'>
+    <div ref={props.refe} className='aboutWrapper'>
       <h1 className='aboutTitle'>
         About me
       </h1>
-      <div className='Info Info-transition' ref={animate}>
+      <div className='Info Info-transition' ref={props.animate}>
         <p>
           Adham Remeh
         </p>
@@ -179,7 +181,7 @@ function About({refe, animate}) {
 
 }
 
-function Techs({ refe }) {
+function Techs(props) {
 
   let items = [reactLogo, unityLogo, pygameLogo, githubLogo, reactLogo, unityLogo, githubLogo]
   let components = []
@@ -195,7 +197,7 @@ function Techs({ refe }) {
 
   return (
 
-    <div ref={refe} className={containerTag}>
+    <div ref={props.refe} className={containerTag}>
       <div className='techHeaderWrapper' >
         <h1 className={HeaderTag}>
           Technologies
@@ -242,14 +244,10 @@ function Projects(props) {
   );
 
   return (
-
-    <div ref={props.refe} className='projectContainer' onClick={props.clickFunc.bind(7)}>
+    <div ref={props.refe} className='projectContainer' onClick={props.clickFunc.bind()}>
       <h1 className='projectHeader'>Best Projects</h1>
       <div className='projectWrapper'>
         <div className='Projects'>
-          <div className='test'>
-
-          </div>
           {cards}
         </div>
       </div>
@@ -259,7 +257,7 @@ function Projects(props) {
 
 }
 
-function Contact({refe}) {
+function Contact(props) {
 
   const Links = {
     "Github": "https://github.com/adhamremeh",
@@ -272,7 +270,7 @@ function Contact({refe}) {
   
   return (
 
-    <div ref={refe} className='contactsContainer'>
+    <div ref={props.refe} className='contactsContainer'>
       <div className='contactsWrapper'>
         <h1 className='contactsHeader'> Reach me via </h1>
         <ul className='LinksList'>

@@ -26,8 +26,6 @@
   
 }
 
-
-
 .hoverCard:hover {
   scale: 1.1;
   transition: ease 1s;
@@ -62,6 +60,8 @@
 
   scale: 1.0;
   transition: ease 1s;
+  
+  z-index: 1;
 
 }
 
@@ -76,17 +76,38 @@
 
 .showCard {
     
-  transform: translateX(var(--posX))  rotateY(180deg);
+  transform: translateX(var(--posX)) translateY(var(--posY)) scale(1.6) rotateY(180deg);
   transition: ease 1.5s;
 
-  scale: 1.6;
+  transition-property: transform;
 
-  z-index: 10;
+  z-index: 11;
 }
 
+/* .hideCard {
+  transition: ease 0.2s;
+  
+    z-index: 1;
+} */
 
-.test {
-  position: absolute;
 
-  z-index: 100;
+.plankActive {
+  
+  z-index: 10;
+  opacity: 0.7;
+  transition: ease 1s;
+  background-color: black;
+}
+
+.plankNotActive {
+  transition: ease 1s;
+  opacity: 0;
+  background-color: black;
+}
+
+.plank {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+
 }
