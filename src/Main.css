@@ -79,7 +79,7 @@
     position: absolute;
 
     left: -55vmax;
-    top: 40svh;
+    top: 40dvh;
 
     z-index: 0;
   }
@@ -96,13 +96,14 @@
     position: absolute;
 
     left: -35vmax;
-    top: 20svh;
+    top: 20dvh;
 
     z-index: 0;
   }
-    .App-header img {
-      height: 80vmin;
-    }
+  
+  .App-header img {
+    height: 80vmin;
+  }
 }
 
 .Personal_Pic0 {
